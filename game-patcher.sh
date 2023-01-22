@@ -1,7 +1,6 @@
 echo " "
 echo === Super Mario Galaxy 2 - Patcher ===
 echo          powered by WIT by Wiimm
-echo             ported by Aldair
 echo " "
 echo " "
 echo "Move your Super Mario Galaxy 2 wbfs/iso file in this folder .Patcher."
@@ -24,11 +23,13 @@ echo " "
 echo Now moving the Demo's files to the Game's files...
 echo " "
 # IstDaDATAFILES
+if [ -f "ISOfiles/DATA/files/ObjectData/Mario.arc" ]; then
 echo "Running IstDaDATAFILES."
     cd ..
     cp -r $PATCHFOLDER Patcher/ISOfiles/DATA/files
     echo " "
 echo Files moved!
+echo "Write your wbfs file name"
 read SMG2NAME
 echo " "
 echo ---------------------------------------------------
@@ -44,7 +45,7 @@ echo " "
 echo Deleting temporary files...
 rm -rf Patcher/ISOfiles
 echo Done!
-echo DEBUG
+clear
 echo " "
 echo === PATCH FINISHED ===
 echo " "
@@ -64,6 +65,7 @@ if [ -f "ISOfiles/files/ObjectData/Mario.arc" ]; then
     cp -r $PATCHFOLDER Patcher/ISOfiles/files
     echo " "
 echo Files moved!
+echo "Write your wbfs file name"
 read SMG2NAME
 echo " "
 echo ---------------------------------------------------
@@ -79,7 +81,7 @@ echo " "
 echo Deleting temporary files...
 rm -rf Patcher/ISOfiles
 echo Done!
-echo DEBUG
+clear
 echo " "
 echo === PATCH FINISHED ===
 echo " "
@@ -99,6 +101,7 @@ if [ -f "ISOfiles/ObjectData/Mario.arc" ]; then
     cp -r $PATCHFOLDER Patcher/ISOfiles
     echo " "
 echo Files moved!
+echo "Write your wbfs file name"
 read SMG2NAME
 echo " "
 echo ---------------------------------------------------
@@ -114,7 +117,7 @@ echo " "
 echo Deleting temporary files...
 rm -rf Patcher/ISOfiles
 echo Done!
-echo DEBUG
+clear
 echo " "
 echo === PATCH FINISHED ===
 echo " "
@@ -128,7 +131,7 @@ read
 exit
 fi
 #ISOkeineDatenda
-#hacer if
+#Im too lazy to make a else here
 echo " "
 echo " "
 echo === ERROR ===
